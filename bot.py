@@ -88,7 +88,6 @@ async def faq(update:Update,context:ContextTypes.DEFAULT_TYPE):
        "*Это подписка?*\nНет. Одна оплата — навсегда.\n\n"
        "*Как получить доступ?*\nОплатили → получили ссылку →\nзарегистрировались → пользуетесь.\n\n"
        "*Работает на телефоне?*\nДа.\n\n"
-       "*Возврат денег?*\n14 дней.\n\n"
        "*Чем лучше Google Sheets?*\nВсё автоматически. Одно приложение\nвместо трёх файлов. Графики. KPI.")
     kb=[[InlineKeyboardButton("💳 Купить доступ",callback_data="buy")],[InlineKeyboardButton("◀️ Назад",callback_data="back")]]
     await q.edit_message_text(t,parse_mode="Markdown",reply_markup=InlineKeyboardMarkup(kb))
@@ -104,7 +103,7 @@ async def buy(update:Update,context:ContextTypes.DEFAULT_TYPE):
 # ═══ Pay card ═══
 async def card(update:Update,context:ContextTypes.DEFAULT_TYPE):
     q=update.callback_query;await q.answer()
-    t="💳 *Оплата переводом*\n\nПереведите *315 000 сум* на карту:\n\n`9860 **** **** 3556`\nSamanov Jakhongir\nAloqabank (Humo)\n\nПосле перевода отправьте скриншот чека 📎"
+    t="💳 *Оплата переводом*\n\nПереведите *315 000 сум* на карту:\n\n`9860120102703556`\nSamanov Jaxongir\n\nПосле перевода отправьте скриншот чека 📎"
     kb=[[InlineKeyboardButton("✅ Я оплатил, отправляю чек",callback_data="receipt")],[InlineKeyboardButton("◀️ Назад",callback_data="buy")]]
     await q.edit_message_text(t,parse_mode="Markdown",reply_markup=InlineKeyboardMarkup(kb))
 
