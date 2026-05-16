@@ -103,7 +103,7 @@ async def buy(update:Update,context:ContextTypes.DEFAULT_TYPE):
 # ═══ Pay card ═══
 async def card(update:Update,context:ContextTypes.DEFAULT_TYPE):
     q=update.callback_query;await q.answer()
-    t="💳 *Оплата переводом*\n\nПереведите *315 000 сум* на карту:\n\n`9860120102703556`\nSamanov Jaxongir\n\nПосле перевода отправьте скриншот чека 📎"
+    t="💳 *Оплата переводом*\n\nПереведите *315 000 сум* на карту:\n\n`9860 1201 0270 3556`\nSamanov Jaxongir\n\nПосле перевода отправьте скриншот чека 📎"
     kb=[[InlineKeyboardButton("✅ Я оплатил, отправляю чек",callback_data="receipt")],[InlineKeyboardButton("◀️ Назад",callback_data="buy")]]
     await q.edit_message_text(t,parse_mode="Markdown",reply_markup=InlineKeyboardMarkup(kb))
 
