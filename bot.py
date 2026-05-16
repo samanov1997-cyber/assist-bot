@@ -12,7 +12,7 @@ SUPA_URL=os.environ.get("SUPA_URL","https://hbzkaenywrybfuriavzw.supabase.co")
 SUPA_KEY=os.environ.get("SUPA_KEY","sb_publishable_5U7Ddy46KpfXItCveLazrQ_rw51W4Jj")
 SITE_URL="https://ownassist.app"
 PRICE=315000
-ADMIN_IDS=[]
+ADMIN_IDS=[5257255992]
 H={"apikey":SUPA_KEY,"Authorization":f"Bearer {SUPA_KEY}","Content-Type":"application/json","Prefer":"return=representation"}
 
 async def supa_insert(t,d):
